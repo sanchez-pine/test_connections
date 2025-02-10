@@ -38,7 +38,7 @@ class Utils(Connections):
 
 @pytest.mark.usefixtures('settings') 
 class TestWebsocket(Utils):
-    def test_request_get_a(self, requests_get_v: str) -> None:
+    def test_request_get_v(self, requests_get_v: str) -> None:
         '''Сравненеие ответа на запрос GET_V с ожидаемым'''
         assert requests_get_v == {'cmd': GET_REQUESTS['cmd1'], 'payload': 'V_12V'}
 
@@ -46,6 +46,6 @@ class TestWebsocket(Utils):
         '''Сравненеие ответа на запрос GET_A с ожидаемым'''
         assert requests_get_a == {'cmd': GET_REQUESTS['cmd2'], 'payload': 'A_12A'}
     
-    def test_request_get_a(self, requests_get_s: str) -> None:
+    def test_request_get_s(self, requests_get_s: str) -> None:
         '''Сравненеие ответа на запрос GET_S с ожидаемым'''
         assert requests_get_s == {'cmd': GET_REQUESTS['cmd3'], 'payload': 'S_DSA123'}
