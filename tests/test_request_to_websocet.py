@@ -37,7 +37,7 @@ class Utils(Connections):
         sleep(5)
 
 @pytest.mark.usefixtures('settings') 
-class TestSerialDevite(Utils):
+class TestWebsocket(Utils):
     def test_request_get_a(self, requests_get_v: str) -> None:
         '''Сравненеие ответа на запрос GET_V с ожидаемым'''
         assert requests_get_v == {'cmd': GET_REQUESTS['cmd1'], 'payload': 'V_12V'}
