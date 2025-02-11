@@ -46,16 +46,3 @@ class WebSocketClient:
     def __del__(self):
         '''При удалении объекта класса, закрывает сокет.'''
         self.stop()
-
-# Пример использования
-if __name__ == '__main__':
-    url = 'ws://echo.websocket.org'  # Замените на ваш URL веб-сокета
-    client = WebSocketClient(url)
-    client.run()
-
-    try:
-        while client.running:
-            time.sleep(1)  # Задержка для ожидания сообщений
-            client.send('Hello again!')  # Отправка сообщения
-    except KeyboardInterrupt:
-        client.stop()
