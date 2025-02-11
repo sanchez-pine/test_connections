@@ -12,6 +12,7 @@ class SerialDevice:
         try:
             self.serial = serial.Serial(self.port, self.baudrate, timeout=self.timeout)
             print(f"Порт {self.port} открыт.")
+            return self.serial
         except serial.SerialException as e:
             print(f"Ошибка открытия порта: {e}")
 
