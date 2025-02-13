@@ -6,7 +6,9 @@ class Connections:
     @pytest.fixture(scope='module')
     def serial_console_connection(self) -> SerialDevice:
         '''Создание сесии для serial'''
-        return SerialDevice.open(port='/dev/ttyUSB0')
+        client = SerialDevice(port="/dev/ttyUSB0")
+        client.open()
+        return client
 
 class Utils(Connections):
     @pytest.fixture(scope='function')
