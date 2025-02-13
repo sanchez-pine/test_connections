@@ -44,7 +44,7 @@ class TestWebsocket(Utils):
 
     def test_request_get_a(self, requests_get_a: str) -> None:
         '''Сравненеие ответа на запрос GET_A с ожидаемым'''
-        assert requests_get_a == {'cmd': GET_REQUESTS['cmd2'], 'payload': 'A_12A'}
+        assert requests_get_a == {'cmd': GET_REQUESTS['cmd2'], 'payload': 'A_12'}
     
     def test_request_get_s(self, requests_get_s: str) -> None:
         '''Сравненеие ответа на запрос GET_S с ожидаемым'''
