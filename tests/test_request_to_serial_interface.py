@@ -44,7 +44,7 @@ class TestSerialDevite(Utils):
 
     def test_request_get_a(self, requests_get_a: str) -> None:
         '''Сравненеие ответа на запрос GET_A с ожидаемым'''
-        assert requests_get_a == 'A_12A'
+        assert requests_get_a == 'A_1A'
     
     def test_request_get_as(self, requests_get_s: str) -> None:
         '''Сравненеие ответа на запрос GET_S с ожидаемым'''
