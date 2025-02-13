@@ -9,7 +9,9 @@ class Connections:
     @pytest.fixture(scope='module')
     def websocket_connection(self) -> WebSocketClient:
         '''Создание сесии для websocket'''
-        return WebSocketClient(url=URL).run()
+        client = WebSocketClient(url=URL)
+        client.run()
+        return client
 
 class Utils(Connections):
     @pytest.fixture(scope='function')
